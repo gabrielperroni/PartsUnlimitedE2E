@@ -132,15 +132,15 @@ namespace PartsUnlimited.Controllers
 
         //
         // GET: /Manage/VerifyPhoneNumber
-        public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
-        {
+        //public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
+        //{
             // This code allows you exercise the flow without actually sending codes
             // For production use please register a SMS provider in IdentityConfig and generate a code here.
-#if DEMO
-            ViewBag.Code = await UserManager.GenerateChangePhoneNumberTokenAsync((await GetCurrentUserAsync()).Id, phoneNumber);
-#endif
-            return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
-        }
+
+          //  ViewBag.Code = await UserManager.GenerateChangePhoneNumberTokenAsync((await GetCurrentUserAsync()).Id, phoneNumber);
+
+        //    return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
+        //}
 
         //
         // POST: /Manage/VerifyPhoneNumber
